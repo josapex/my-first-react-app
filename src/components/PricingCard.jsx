@@ -1,4 +1,5 @@
 import Styles from "./PricingCard.module.css";
+import Button from "./Button/Button";
 
 function PricingCard({
         label,
@@ -8,9 +9,17 @@ function PricingCard({
         imageAlt,
         benefits
     }) {
+        
+    const themeClasses = {
+        "Start-UP": Styles["card--startup"],
+        "Pro": Styles["card--pro"],
+        "Enterprise": Styles["card--enterprise"],
+    }
+
+    const themeClass = themeClasses[label]
 
     return (
-        <div className={Styles.card}>
+        <div className={`${Styles.card} ${themeClass}`}>
             <div className={Styles.card_wrapper}>
                 <span className={Styles.card_label}>{label}</span>
                 <div >
@@ -28,7 +37,7 @@ function PricingCard({
                         )
                     })}
                 </ul>
-                <button className={Styles.card_button}>CHOOSE</button>
+                <Button className={Styles.card_button}>CHOOSE</Button>
             </div>
         </div>
     );

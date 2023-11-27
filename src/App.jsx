@@ -37,18 +37,24 @@ function App() {
     },
     ]
     return(
-        <div className={Styles.main}>
-            {cards.map(card => {
-                return(
-                    <PricingCard 
-                        label={card.label}
-                        price={card.price}
-                        image={card.image}
-                        imageAlt={card.imageAlt}
-                        benefits={card.benefits}
-                    />
-                )
-            })}
+        <div>
+            <div className={Styles.bg}>
+                <h1 className={Styles.header}>Choose your plane</h1>
+                <p className={Styles.discription}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At veritatis mollitia omnis iure qui? Ratione earum</p>
+            </div>
+            <div className={Styles.main}>
+                {cards.map(card => {
+                    return(
+                        <PricingCard 
+                            label={card.label}
+                            price={card.price}
+                            image={card.image}
+                            imageAlt={card.imageAlt}
+                            benefits={card.benefits}
+                        />
+                    )
+                })}
+            </div>
         </div>
     )
 }

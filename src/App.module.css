@@ -1,5 +1,26 @@
+.bg{
+    background-color: #496ca1;
+    padding: 50px;
+    height: 500px;
+    text-align: center;
+}
+.header, .discription{
+    max-width: 500px;
+    margin: 0 auto;
+}
+.header{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.discription{
+    font-size: 1.2rem;
+}
 .main{
+    top: -250px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    position: relative;
 }
