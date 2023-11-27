@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&family=Poppins:wght@400;500;600;700&family=Roboto:wght@500;700;900&family=Rubik:ital,wght@0,300;1,300&display=swap" rel="stylesheet');
+
+.card{
+    max-width: 280px;
+    background-color: white;
+    border-radius: 3px;
+    --price-theme: #D62D2C;
+    font-family: 'Poppins', sans-serif;
+}
+.card_wrapper{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 10px;
+}
+.card_label{
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.card_image{
+    max-width: 70px;
+    width: 100%;
+    margin-top: 40px;
+}
+.card_price_container{
+    margin-top: 30px;
+    text-align: center;
+    color: var(--price-theme);
+    font-size: 1.3rem;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #e6e5e5;
+}
+.card_price{
+    font-size: 1.5rem;
+}
+.card_duration{
+    font-size: .7rem;
+}
+.card_benefit-label{
+    color: var(--price-theme);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 1.5px;
+}
+.card_benefits{
+    color: black;
+    padding-left: 10px;
+    list-style: none;
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+}
+.card_benefit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.card_benefit-icon{
+    width: 12px;
+    height: 12px;
+    background-color: color-mix(in srgb, var(--price-theme), white 20%);
+    border-radius: 50%;
+    margin: 0 6px;
+}
+.card_button{
+    text-transform: uppercase;
+    background-color: var(--price-theme);
+    padding: 12px;
+    width: 100%;
+    border: 2px solid #8f0b0b;
+    color: white;
+}
