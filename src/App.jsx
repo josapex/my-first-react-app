@@ -48,6 +48,7 @@ function App() {
                         <PricingCard 
                             label={card.label}
                             price={card.price}
+                            duration={card.duration}
                             image={card.image}
                             imageAlt={card.imageAlt}
                             benefits={card.benefits}
