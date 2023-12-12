@@ -1,20 +1,16 @@
 import Styles from "./PricingCard.module.css";
 import Button from "./Button/Button";
+import PropTypes from 'prop-types'
 
-function PricingCard({
-        label,
-        price,
-        duration = "",
-        image,
-        imageAlt,
-        benefits
-    }) {
+function PricingCard({card}) {
         
     const themeClasses = {
         "Start-UP": Styles["card--startup"],
         "Pro": Styles["card--pro"],
         "Enterprise": Styles["card--enterprise"],
     }
+
+    const {label, price, duration, image, imageAlt, benefits,} = card
 
     const themeClass = themeClasses[label]
 
@@ -31,9 +27,9 @@ function PricingCard({
                 </div>
                 <span className={Styles["card_benefit-label"]}>Everything in Free, Plus</span>
                 <ul className={Styles.card_benefits}>
-                    {benefits.map(benefit => {
+                    {benefits.map((benefit) => {
                         return(
-                            <li key={label} className={Styles.card_benefit}><img src="images/icon/check.png" alt="" className={Styles["card_benefit-icon"]} />{benefit}</li>
+                            <li key={benefit} className={Styles.card_benefit}><img src="images/icon/check.png" alt="" className={Styles["card_benefit-icon"]} />{benefit}</li>
                         )
                     })}
                 </ul>
@@ -41,6 +37,17 @@ function PricingCard({
             </div>
         </div>
     );
+}
+
+PricingCard.propTypes = {
+    card: PropTypes.exact({
+        label: PropTypes.string.isRequired,
+        price: PropTypes.string.isRequired,
+        duration: PropTypes.string,
+        image: PropTypes.string.isRequired,
+        imageAlt: PropTypes.string.isRequired,
+        benefits: PropTypes.arrayOf(PropTypes.string).isRequired,
+    })
 }
 
 export default PricingCard;

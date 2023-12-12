@@ -43,15 +43,11 @@ function App() {
                 <p className={Styles.discription}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At veritatis mollitia omnis iure qui? Ratione earum</p>
             </div>
             <div className={Styles.main}>
-                {cards.map(card => {
+                {cards.map((card) => {
                     return(
                         <PricingCard 
-                            label={card.label}
-                            price={card.price}
-                            duration={card.duration}
-                            image={card.image}
-                            imageAlt={card.imageAlt}
-                            benefits={card.benefits}
+                            card={card}
+                            key={card.label}
                         />
                     )
                 })}
