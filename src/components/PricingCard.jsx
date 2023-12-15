@@ -1,6 +1,6 @@
 import Styles from "./PricingCard.module.css";
 import Button from "./Button/Button";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 function PricingCard({card}) {
         
@@ -23,7 +23,10 @@ function PricingCard({card}) {
                 </div>
                 <div className={Styles.card_price_container}>
                     <span className={Styles.card_price}>{price}</span>
-                    <span className={Styles.card_duration}> {duration}</span>
+                    {/* {duration === "" ? null :
+                        <span className={Styles.card_duration}>{duration}</span>
+                    } */}
+                    {duration && <span className={Styles.card_duration}>{duration}</span>}
                 </div>
                 <span className={Styles["card_benefit-label"]}>Everything in Free, Plus</span>
                 <ul className={Styles.card_benefits}>
