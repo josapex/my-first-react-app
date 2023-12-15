@@ -6,7 +6,7 @@ function App() {
     {
         label: "Start-UP",
         price: "Free",
-        image: "src/images/bicycle.png",
+        image: "/images/bicycle.png",
         imageAlt: "Moving bike",
         benefits: [
             "Unlimited Downloads",
@@ -17,7 +17,7 @@ function App() {
         label: "Pro",
         price: "49$",
         duration: "/year",
-        image: "src/images/car.png",
+        image: "/images/car.png",
         imageAlt: "Moving car",
         benefits: [
             "Upto 10 Users",
@@ -27,7 +27,7 @@ function App() {
     }, {
         label: "Enterprise",
         price: "99$",
-        image: "src/images/airplane.png",
+        image: "/images/airplane.png",
         imageAlt: "Moving plane",
         benefits: [
             "Unlimited Access",

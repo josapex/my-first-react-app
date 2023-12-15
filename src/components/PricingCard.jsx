@@ -32,7 +32,7 @@ function PricingCard({card}) {
                 <ul className={Styles.card_benefits}>
                     {benefits.map((benefit) => {
                         return(
-                            <li key={benefit} className={Styles.card_benefit}><img src="src/images/icon/check.png" alt="" className={Styles["card_benefit-icon"]} />{benefit}</li>
+                            <li key={benefit} className={Styles.card_benefit}><img src="/images/icon/check.png" alt="" className={Styles["card_benefit-icon"]} />{benefit}</li>
                         )
                     })}
                 </ul>
